@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SHARPEN — Mindset. Style. Presence.</title>
+  <meta name="description" content="SHARPEN is a personal branding program for foreigners in Korea. Small, selective, hands-on — mindset and confidence first, then grooming, style and presence." />
+  <meta property="og:title" content="SHARPEN — Mindset. Style. Presence." />
+  <meta property="og:description" content="Personal branding program for foreigners in Korea. Small, selective, hands-on." />
+  <meta property="og:image" content="/assets/og-image.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/assets/favicon.png" />
+
+  <!-- Tailwind CSS (CDN — no build step) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Pretendard: body copy -->
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <!-- Big Shoulders Display: headline / display type -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            canvas: '#0B0B0C',
+            panel:  '#161615',
+            ink:    '#F3F1EC',
+            muted:  '#9C978D',
+            accent: '#B08D4F',
+          },
+          fontFamily: {
+            sans: ['"Pretendard Variable"', 'Pretendard', 'system-ui', 'sans-serif'],
+            display: ['"Big Shoulders Display"', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body { font-family: "Pretendard Variable", Pretendard, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    .font-display { font-family: "Big Shoulders Display", sans-serif; letter-spacing: 0.01em; }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { transition: none; opacity: 1; transform: none; } }
+
+    .hairline { background: linear-gradient(90deg, transparent, rgba(176,141,79,0.6), transparent); }
+
+    @keyframes marquee { to { transform: translateX(-50%); } }
+    .marquee-track { animation: marquee 32s linear infinite; }
+
+    .stage-number { font-family: "Big Shoulders Display", sans-serif; }
+  </style>
+</head>
+<body class="bg-canvas text-ink antialiased">
+
+  <!-- ══════════════ NAV ══════════════ -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-canvas/80 backdrop-blur border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2">
+        <img src="/assets/logo-mark.png" alt="SHARPEN mark" class="h-8 w-8 object-contain" width="32" height="32" />
+        <span class="font-display font-extrabold text-xl tracking-wide">SHARPEN</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-muted">
+        <a href="#about" class="hover:text-ink transition">Who We Are</a>
+        <a href="#program" class="hover:text-ink transition">Program</a>
+        <a href="#selection" class="hover:text-ink transition">Selection</a>
+        <a href="#apply" class="bg-accent text-canvas font-bold rounded-full px-5 py-2 hover:brightness-110 transition">Apply</a>
+      </nav>
+      <a href="#apply" class="md:hidden bg-accent text-canvas font-bold rounded-full px-4 py-2 text-sm">Apply</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ══════════════ HERO ══════════════ -->
+    <section id="top" class="relative px-5 pt-32 pb-16 md:min-h-[92vh] md:flex md:items-center overflow-hidden">
+      <div class="absolute inset-0 -z-10 opacity-[0.07]" style="background-image: radial-gradient(circle at 1px 1px, #F3F1EC 1px, transparent 0); background-size: 28px 28px;"></div>
+      <div class="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
+        <div class="reveal">
+          <p class="text-accent text-sm tracking-[0.3em] uppercase mb-5">Personal Branding · Korea</p>
+          <h1 class="font-display font-black text-6xl sm:text-7xl md:text-8xl leading-[0.9] mb-6">
+            SHARPEN
+          </h1>
+          <p class="font-display font-semibold text-lg md:text-xl tracking-[0.25em] text-accent uppercase mb-6">
+            Mindset &middot; Style &middot; Presence
+          </p>
+          <p class="text-muted text-lg leading-relaxed mb-10 max-w-md">
+            A personal branding program for foreigners in Korea. Small, selective, hands-on — built from the inside out, so you walk into your next chapter as your sharpest self.
+          </p>
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="#apply" class="bg-accent text-canvas font-bold rounded-full px-8 py-4 hover:brightness-110 transition">Apply for the Next Round</a>
+            <a href="#program" class="border border-white/20 text-ink font-bold rounded-full px-8 py-4 hover:border-accent hover:text-accent transition">See the Program</a>
+          </div>
+        </div>
+        <div class="flex justify-center md:justify-end">
+          <img src="/assets/logo-mark.png" alt="SHARPEN emblem — a sharpened S" class="w-64 sm:w-80 md:w-full max-w-md max-h-[55vh] md:max-h-[70vh] object-contain drop-shadow-[0_0_60px_rgba(176,141,79,0.15)]" width="700" height="700" />
+        </div>
+      </div>
+    </section>
+
+    <!-- keyword marquee -->
+    <div class="border-y border-white/10 py-4 overflow-hidden reveal">
+      <div class="flex whitespace-nowrap marquee-track">
+        <div class="flex items-center gap-8 pr-8 font-display font-bold text-xl md:text-2xl tracking-wide text-muted uppercase">
+          <span>Mindset</span><span class="text-accent">&bull;</span>
+          <span>Confidence</span><span class="text-accent">&bull;</span>
+          <span>Presence</span><span class="text-accent">&bull;</span>
+          <span>Style</span><span class="text-accent">&bull;</span>
+          <span>Grooming</span><span class="text-accent">&bull;</span>
+          <span>Storytelling</span><span class="text-accent">&bull;</span>
+        </div>
+        <div class="flex items-center gap-8 pr-8 font-display font-bold text-xl md:text-2xl tracking-wide text-muted uppercase" aria-hidden="true">
+          <span>Mindset</span><span class="text-accent">&bull;</span>
+          <span>Confidence</span><span class="text-accent">&bull;</span>
+          <span>Presence</span><span class="text-accent">&bull;</span>
+          <span>Style</span><span class="text-accent">&bull;</span>
+          <span>Grooming</span><span class="text-accent">&bull;</span>
+          <span>Storytelling</span><span class="text-accent">&bull;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════ ABOUT (Who We Are) ══════════════ -->
+    <section id="about" class="max-w-6xl mx-auto px-5 py-24 md:py-32">
+      <div class="grid md:grid-cols-[auto_1fr] gap-10 md:gap-16">
+        <div class="reveal">
+          <p class="text-accent text-sm tracking-[0.3em] uppercase mb-3">Who We Are</p>
+          <h2 class="font-display font-extrabold text-4xl md:text-6xl leading-[0.95] max-w-xs">
+            Real change starts from the inside out.
+          </h2>
+        </div>
+        <div class="reveal space-y-6 text-lg text-muted leading-relaxed max-w-2xl">
+          <p>
+            Before we ever touch grooming or style, we work on the mindset and confidence underneath it. Then we build the full package on top — grooming, style, how you carry yourself — so you walk into your next interview, meeting, or chapter of life as your sharpest self, inside and out.
+          </p>
+          <p>
+            Most foreigners in Korea aren't lacking ability — they're lacking a level-up. No one ever sat them down and worked through how they present themselves: what to wear, how to groom, how to hold a room, how to back it all up with real confidence instead of guesswork. SHARPEN was built to close that gap directly, starting from the inside.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-20 grid md:grid-cols-2 gap-6">
+        <div class="reveal bg-panel border border-white/10 rounded-2xl p-8 hover:-translate-y-1 transition">
+          <p class="text-accent text-sm tracking-[0.3em] uppercase mb-3">Vision</p>
+          <p class="text-xl md:text-2xl font-medium leading-snug">
+            A Korea where every foreigner has access to the tools to become their sharpest self, inside and out.
+          </p>
+        </div>
+        <div class="reveal bg-panel border border-white/10 rounded-2xl p-8 hover:-translate-y-1 transition">
+          <p class="text-accent text-sm tracking-[0.3em] uppercase mb-3">Mission</p>
+          <p class="text-xl md:text-2xl font-medium leading-snug">
+            Hands-on access to personal branding — mindset and confidence first, then grooming, style, and presence — through selective, small-group sessions built around who you actually are.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ PROGRAM ══════════════ -->
+    <section id="program" class="max-w-6xl mx-auto px-5 py-24 md:py-32">
+      <div class="max-w-2xl mb-16 reveal">
+        <p class="text-accent text-sm tracking-[0.3em] uppercase mb-3">The Program</p>
+        <h2 class="font-display font-extrabold text-4xl md:text-6xl leading-[0.95] mb-5">
+          Five stages. One sharper you.
+        </h2>
+        <p class="text-muted text-lg">Inner work first, then the outer layer built on top of it.</p>
+      </div>
+
+      <div class="space-y-4">
+        <!-- 01 -->
+        <div class="reveal group border-t border-white/10 py-8 md:flex md:items-start md:gap-10">
+          <div class="stage-number text-accent font-black text-5xl md:text-6xl md:w-24 shrink-0 leading-none mb-4 md:mb-0">01</div>
+          <div>
+            <h3 class="font-display font-bold text-2xl md:text-3xl mb-3">Foundation — Mindset &amp; Self-Discovery</h3>
+            <p class="text-muted mb-4 max-w-xl">The inner work, and it comes first.</p>
+            <ul class="grid sm:grid-cols-3 gap-x-6 gap-y-2 text-sm text-ink/90 max-w-3xl">
+              <li class="pl-4 border-l border-accent/40">Values &amp; strengths assessment</li>
+              <li class="pl-4 border-l border-accent/40">Confidence &amp; mindset coaching</li>
+              <li class="pl-4 border-l border-accent/40">Personal narrative building</li>
+            </ul>
+          </div>
+        </div>
+        <!-- 02 -->
+        <div class="reveal group border-t border-white/10 py-8 md:flex md:items-start md:gap-10">
+          <div class="stage-number text-accent font-black text-5xl md:text-6xl md:w-24 shrink-0 leading-none mb-4 md:mb-0">02</div>
+          <div>
+            <h3 class="font-display font-bold text-2xl md:text-3xl mb-3">Presence &amp; Communication</h3>
+            <p class="text-muted mb-4 max-w-xl">How you sound and hold yourself in the room.</p>
+            <ul class="grid sm:grid-cols-3 gap-x-6 gap-y-2 text-sm text-ink/90 max-w-3xl">
+              <li class="pl-4 border-l border-accent/40">Speech &amp; conversation coaching</li>
+              <li class="pl-4 border-l border-accent/40">&ldquo;Room command&rdquo; training</li>
+              <li class="pl-4 border-l border-accent/40">Storytelling</li>
+            </ul>
+          </div>
+        </div>
+        <!-- 03 -->
+        <div class="reveal group border-t border-white/10 py-8 md:flex md:items-start md:gap-10">
+          <div class="stage-number text-accent font-black text-5xl md:text-6xl md:w-24 shrink-0 leading-none mb-4 md:mb-0">03</div>
+          <div>
+            <h3 class="font-display font-bold text-2xl md:text-3xl mb-3">Style &amp; Grooming</h3>
+            <p class="text-muted mb-4 max-w-xl">The outer layer, built on top of the inner work.</p>
+            <ul class="grid sm:grid-cols-3 gap-x-6 gap-y-2 text-sm text-ink/90 max-w-3xl">
+              <li class="pl-4 border-l border-accent/40">Personal styling consultation</li>
+              <li class="pl-4 border-l border-accent/40">Grooming consultation</li>
+              <li class="pl-4 border-l border-accent/40">&ldquo;Look&rdquo; calibration</li>
+            </ul>
+          </div>
+        </div>
+        <!-- 04 -->
+        <div class="reveal group border-t border-white/10 py-8 md:flex md:items-start md:gap-10">
+          <div class="stage-number text-accent font-black text-5xl md:text-6xl md:w-24 shrink-0 leading-none mb-4 md:mb-0">04</div>
+          <div>
+            <h3 class="font-display font-bold text-2xl md:text-3xl mb-3">Digital &amp; Public Presence</h3>
+            <p class="text-muted mb-4 max-w-xl">One coherent image, everywhere people find you.</p>
+            <ul class="grid sm:grid-cols-3 gap-x-6 gap-y-2 text-sm text-ink/90 max-w-3xl">
+              <li class="pl-4 border-l border-accent/40">Personal brand audit</li>
+              <li class="pl-4 border-l border-accent/40">Content consistency coaching</li>
+              <li class="pl-4 border-l border-accent/40">Photo &amp; headshot guidance</li>
+            </ul>
+          </div>
+        </div>
+        <!-- 05 -->
+        <div class="reveal group border-t border-b border-white/10 py-8 md:flex md:items-start md:gap-10">
+          <div class="stage-number text-accent font-black text-5xl md:text-6xl md:w-24 shrink-0 leading-none mb-4 md:mb-0">05</div>
+          <div>
+            <h3 class="font-display font-bold text-2xl md:text-3xl mb-3">Capstone — Application in Real Life</h3>
+            <p class="text-muted mb-4 max-w-xl">Everything comes together, under real conditions.</p>
+            <ul class="grid sm:grid-cols-3 gap-x-6 gap-y-2 text-sm text-ink/90 max-w-3xl">
+              <li class="pl-4 border-l border-accent/40">Mock interview / big-moment simulation</li>
+              <li class="pl-4 border-l border-accent/40">Final consultation &amp; action plan</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ SELECTION ══════════════ -->
+    <section id="selection" class="px-5 py-24 md:py-32 bg-panel border-y border-white/10">
+      <div class="max-w-4xl mx-auto text-center reveal">
+        <p class="text-accent text-sm tracking-[0.3em] uppercase mb-3">Who It's For</p>
+        <h2 class="font-display font-extrabold text-4xl md:text-6xl leading-[0.95] mb-8">
+          Small. Selective. Built around you.
+        </h2>
+        <p class="text-muted text-lg leading-relaxed max-w-2xl mx-auto mb-10">
+          Each round, we select through an application and interview process, then give you a branding session and consultation built around who you actually are — not a one-size-fits-all script.
+        </p>
+        <div class="grid sm:grid-cols-3 gap-6 text-left max-w-3xl mx-auto">
+          <div class="border border-white/10 rounded-xl p-6">
+            <p class="font-display font-bold text-xl mb-2">01. Apply</p>
+            <p class="text-muted text-sm">Submit your application for the round you're interested in.</p>
+          </div>
+          <div class="border border-white/10 rounded-xl p-6">
+            <p class="font-display font-bold text-xl mb-2">02. Interview</p>
+            <p class="text-muted text-sm">A short conversation so we understand who you are and what you need.</p>
+          </div>
+          <div class="border border-white/10 rounded-xl p-6">
+            <p class="font-display font-bold text-xl mb-2">03. Selected</p>
+            <p class="text-muted text-sm">Selected applicants begin the program, built around them.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ FAQ ══════════════ -->
+    <section id="faq" class="max-w-3xl mx-auto px-5 py-24 md:py-32">
+      <p class="text-accent text-sm tracking-[0.3em] uppercase mb-3 reveal">FAQ</p>
+      <h2 class="font-display font-extrabold text-4xl md:text-5xl mb-10 reveal">Good to know</h2>
+      <div class="space-y-3 reveal">
+        <details class="group border border-white/10 rounded-xl p-5">
+          <summary class="cursor-pointer font-bold list-none flex items-center justify-between">
+            Who is SHARPEN for?
+            <span class="text-accent group-open:rotate-45 transition">+</span>
+          </summary>
+          <p class="text-muted mt-3">Foreigners living in Korea who want a real, hands-on level-up in how they present themselves — mindset, presence, style, and grooming — before their next interview, meeting, or big moment.</p>
+        </details>
+        <details class="group border border-white/10 rounded-xl p-5">
+          <summary class="cursor-pointer font-bold list-none flex items-center justify-between">
+            How do I apply?
+            <span class="text-accent group-open:rotate-45 transition">+</span>
+          </summary>
+          <p class="text-muted mt-3">Use the Apply button below. Each round is selective, so applications are followed by a short interview before a final decision.</p>
+        </details>
+        <details class="group border border-white/10 rounded-xl p-5">
+          <summary class="cursor-pointer font-bold list-none flex items-center justify-between">
+            Is this a group program or one-on-one?
+            <span class="text-accent group-open:rotate-45 transition">+</span>
+          </summary>
+          <p class="text-muted mt-3">Small-group sessions, built around who each person actually is — not a mass course.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ══════════════ CTA / APPLY ══════════════ -->
+    <section id="apply" class="max-w-6xl mx-auto px-5 py-24 md:py-32">
+      <div class="reveal bg-panel border border-accent/30 rounded-3xl px-8 py-16 md:py-20 text-center relative overflow-hidden">
+        <div class="absolute inset-x-0 top-0 h-px hairline"></div>
+        <img src="/assets/logo-mark.png" alt="" class="w-16 h-16 object-contain mx-auto mb-8 opacity-90" width="64" height="64" loading="lazy" />
+        <h2 class="font-display font-extrabold text-4xl md:text-6xl leading-[0.95] mb-6">
+          Walk in as your sharpest self.
+        </h2>
+        <p class="text-muted text-lg max-w-xl mx-auto mb-10">
+          Applications for the next round are open. Small group, selective, built around who you are.
+        </p>
+        <!-- TODO: replace # with the application link (Google Form, Eventus, etc.) -->
+        <a href="#" class="inline-block bg-accent text-canvas font-bold rounded-full px-10 py-4 hover:brightness-110 transition">Apply Now</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="border-t border-white/10 px-5 py-12 text-sm text-muted">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
+      <div class="flex items-center gap-2">
+        <img src="/assets/logo-mark.png" alt="SHARPEN mark" class="h-6 w-6 object-contain" width="24" height="24" loading="lazy" />
+        <div>
+          <p class="font-display font-bold text-ink tracking-wide">SHARPEN</p>
+          <p class="text-xs">Mindset &middot; Style &middot; Presence</p>
+        </div>
+      </div>
+      <nav class="flex flex-wrap gap-x-6 gap-y-2">
+        <a href="#about" class="hover:text-ink transition">Who We Are</a>
+        <a href="#program" class="hover:text-ink transition">Program</a>
+        <a href="#selection" class="hover:text-ink transition">Selection</a>
+        <a href="#faq" class="hover:text-ink transition">FAQ</a>
+        <a href="#apply" class="hover:text-ink transition">Apply</a>
+      </nav>
+      <div>
+        <!-- TODO: add a contact email / Instagram handle -->
+        <p><!-- TODO: contact@sharpen.example --></p>
+        <p class="mt-2">&copy; 2026 SHARPEN. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  </script>
+</body>
+</html>

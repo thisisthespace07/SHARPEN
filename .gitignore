@@ -1,0 +1,8 @@
+_source/
+.DS_Store
+.vercel/
+
+# brief-to-site skill installer files — not part of the website
+brief-to-site.zip
+Install-and-Usage.md
+설치와_사용법.md
